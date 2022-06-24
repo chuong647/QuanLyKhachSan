@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4D04EC8-45F3-4A05-B7AB-EAD4CB7F1F48}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyKhachSan</RootNamespace>
+    <AssemblyName>QuanLyKhachSan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillInfoDAO.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\MenuListDAO.cs" />
+    <Compile Include="DAO\RoomDAO.cs" />
+    <Compile Include="DAO\RoomTypeDAO.cs" />
+    <Compile Include="DAO\ServiceDAO.cs" />
+    <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\BillInfo.cs" />
+    <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\MenuList.cs" />
+    <Compile Include="DTO\Room.cs" />
+    <Compile Include="DTO\RoomType.cs" />
+    <Compile Include="DTO\Service.cs" />
+    <Compile Include="fCustomerInfomation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCustomerInfomation.Designer.cs">
+      <DependentUpon>fCustomerInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDatPhong.Designer.cs">
+      <DependentUpon>fDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRoomManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRoomManager.Designer.cs">
+      <DependentUpon>fRoomManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fService.Designer.cs">
+      <DependentUpon>fService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fCustomerInfomation.resx">
+      <DependentUpon>fCustomerInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDatPhong.resx">
+      <DependentUpon>fDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRoomManager.resx">
+      <DependentUpon>fRoomManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fService.resx">
+      <DependentUpon>fService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration_registration2-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\160726150143-us-beautiful-hotels-17-bellagio-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %2887%29.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
